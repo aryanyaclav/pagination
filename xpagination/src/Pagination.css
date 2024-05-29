@@ -5,4 +5,43 @@
     align-items: center;
     font-family:'Times New Roman', Times, serif;
     font-weight: bold;
+    background-color: aliceblue;
+}
+
+.buttonContainer{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.insideContainer{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button{
+    background-color:darkgreen;
+    width: 25%;
+    height: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    border-radius: 10px;
+    color:white;
+}
+
+.pageNumber{
+    width: 10%;
+    height: 25px;
+    border-radius: 5px;
+    background-color: darkgreen;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.mainContainer{
+    background-color: aliceblue;
 }

@@ -4,7 +4,7 @@ import './Table.css'
 
 export default function Table({headings, body}) {
   return (
-    <div>
+    <div className="tableContainer">
         <table>
             <thead>
                 <tr>

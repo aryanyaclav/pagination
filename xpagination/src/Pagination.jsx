@@ -15,9 +15,9 @@ export default function Pagination() {
     let fetchData = () => {
         try{
             fetch(contentApi).then((res) => res.json()).then((data) => 
-                setEmployeeData(data)).catch((err) => console.log(err))
+                setEmployeeData(data)).catch((err) => alert("failed to fetch data"))
         }catch(err){
-            console.log("error fetching data")
+            console.log(`Some error in fetching data: ${err}`)
         }
     }
 
@@ -73,17 +73,20 @@ export default function Pagination() {
     }, [presentPage,employeeData, paginatedData])
 
   return (
-    <div>
+    <div className="mainContainer">
             {/* { [1,2,3,4,5].map((page) => {
                 return <button onClick={(e) => displayDataAndPage(e)} value={page}>{page}</button>
             })}
             <button onClick={() => displayselectedPageData()}>display data</button> */}
             <div className="main-heading">Employee Data Table</div>
             <Table headings={heading} body={displayData} />
-            <div>
-                <button onClick={(() => goToPreviousPage())}>Previous</button>
-                <div>{presentPage}</div>
+            <div className="buttonContainer">
+            <div className='insideContainer'>
+            <button onClick={(() => goToPreviousPage())}>Previous</button>
+                <div className="pageNumber">{presentPage}</div>
                 <button onClick={(() => goToNextPage())}>Next</button>
+            </div>
+                
             </div>
     </div>
   )

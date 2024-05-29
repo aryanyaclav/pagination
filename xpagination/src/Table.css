@@ -1,0 +1,17 @@
+.tableContainer{
+    background-color: aliceblue;
+    height: 77vh;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+thead{
+    background-color: darkgreen;
+    color: white;
+}
+
+table{
+    height: 100%;
+    width: 100%;
+}
